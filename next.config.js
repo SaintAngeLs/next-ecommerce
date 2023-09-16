@@ -68,11 +68,11 @@ const moduleExports = {
     PORT: 5433,
     DATABASE_END_POINT: '127.0.0.1',
     // S3 BUCKET
-    S3_BUCKET_NAME: 'exommercebuckernextapp',
-    S3_REGION: 'eu-north-1',
-    S3_ACCESS_KEY_ID: 'AKIAUOKGVHWGQKIIMIVF',
-    S3_SECRET_ACCESS_KEY: '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',
-    S3_ENDPOINT: 'https://exommercebuckernextapp.s3.eu-north-1.amazonaws.com'
+    S3_BUCKET_NAME: process.env.S3_BUCKET_NAME,
+    S3_REGION: process.env.S3_REGION,
+    S3_ACCESS_KEY_ID: process.env.S3_ACCESS_KEY_ID,
+    S3_SECRET_ACCESS_KEY: process.env.S3_SECRET_ACCESS_KEY,
+    S3_ENDPOINT: process.env.S3_ENDPOINT
   },
   typescript: {
     ignoreBuildErrors: true
