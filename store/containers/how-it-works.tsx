@@ -36,14 +36,18 @@ export default function HowItWorks() {
       <div className="flex w-full px-20px md:p-30px py-40px rounded border border-gray-300 bg-white">
         <div className="feature-block-wrapper w-full grid grid-cols-1 gap-x-30px gap-y-40px md:grid-cols-2 xl:grid-cols-4 xxl:gap-30px">
           {data.map((item, index) => (
-            <FeatureBlock
-              key={item.id}
-              title={item.title}
-              description={item.description}
-              counterBg={item.background}
-              counter={index + 1}
-              className="feature-block"
-            />
+            <div className="relative" key={item.id}>
+            
+              <FeatureBlock
+                key={item.id}
+                title={item.title}
+                description={item.description}
+                counterBg={item.background}
+                counter={index + 1}
+                className="feature-block"
+              />
+
+            </div>
           ))}
         </div>
       </div>

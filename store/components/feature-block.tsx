@@ -24,15 +24,20 @@ const FeatureBLock: React.FC<FeatureBLockProps> = ({
   counter
 }) => {
   const classNames = FeatureBase + ' ' + className;
+
   return (
     <div className={classNames}>
+
       <span className={FeatureCounter} style={{ backgroundColor: counterBg }}>
         {counter}
       </span>
+
       <div className={FeatureContent}>
+
         <span className={FeatureTitle}>{title}</span>
 
         <p className={FeatureDetails}>{description}</p>
+        
       </div>
     </div>
   );
