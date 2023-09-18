@@ -32,8 +32,8 @@ export function formatVariantPrice({
   const hasDiscount = baseAmount < amount;
   const formatDiscount = new Intl.NumberFormat(locale, { style: 'percent' });
   const discount = hasDiscount
-    ? formatDiscount.format((amount - baseAmount) / amount)
-    : null;
+                  ? formatDiscount.format((amount - baseAmount) / amount)
+                  : null;
 
   const price = formatPrice({ amount, currencyCode, locale });
   const basePrice = hasDiscount

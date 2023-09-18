@@ -20,3 +20,20 @@ export const setCookie = (
 
   res.setHeader('Set-Cookie', serialize(name, stringValue, options));
 };
+
+/**
+ * This destroys a cookie by setting its maxAge to a negative value
+ */
+export const destroyCookie = (
+  res: NextApiResponse,
+  name: string,
+  options: CookieSerializeOptions = {}
+) => {
+  res.setHeader(
+    'Set-Cookie',
+    serialize(name, '', {
+      ...options,
+      maxAge: -1
+    })
+  );
+};

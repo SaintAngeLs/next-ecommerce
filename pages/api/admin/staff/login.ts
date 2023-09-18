@@ -58,6 +58,7 @@ class Handler extends PostgresClient {
 
               const PRODUCTION_ENV = process.env.NODE_ENV === 'production';
 
+              /* Cookies settings */
               if (token) {
                 setCookie(res, this.CookieNames.STAFF_TOKEN_NAME, token, {
                   httpOnly: true,
