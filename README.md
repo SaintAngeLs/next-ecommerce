@@ -1,3 +1,6 @@
+## Update
+The project is currently in development
+
 ### ------------------------
 Generate jwt public and private keys
 
