@@ -36,15 +36,10 @@ const LoginPage = () => {
           quality={100}
         /> */}
 
-                <video
-                    src={shopVideo}
-                    type="video/mp4"
-                    loop
-                    controls={false}
-                    muted
-                    autoPlay
-                    className="w-full h-full object-cover"
-                />
+<video loop controls={false} muted autoPlay className="w-full h-full object-cover">
+    <source src={shopVideo} type="video/mp4" />
+</video>
+
       </div>
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="m-auto max-w-[420px] w-full bg-light sm:shadow p-5 sm:p-8 rounded">
