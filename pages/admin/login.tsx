@@ -10,6 +10,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Fragment, useEffect } from 'react';
 
 import shop from '../../public/shop.jpg';
+import shopVideo from '../../public/shop.mp4';
 
 const LoginPage = () => {
   const router = useRouter();
@@ -26,14 +27,24 @@ const LoginPage = () => {
         className="fixed h-full w-full overflow-hidden"
         style={{ zIndex: -1 }}
       >
-        <Image
+        {/* <Image
           alt="Shop-bg"
           src={shop}
           placeholder="blur"
           layout="fill"
           objectFit="cover"
           quality={100}
-        />
+        /> */}
+
+                <video
+                    src={shopVideo}
+                    type="video/mp4"
+                    loop
+                    controls={false}
+                    muted
+                    autoPlay
+                    className="w-full h-full object-cover"
+                />
       </div>
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="m-auto max-w-[420px] w-full bg-light sm:shadow p-5 sm:p-8 rounded">
